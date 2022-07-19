@@ -21,6 +21,13 @@ public class ImportedProduct extends Product {
 		this.customsFee = customsFee;
 	}
 	
-	
+	public Double totalPrice() {
+		return price + customsFee;
+	}
 
+	@Override
+	public String toString() {
+		return name + " $ " + totalPrice() + " (Customs Fee: $ "+ customsFee + ")";
+	}
+	
 }
